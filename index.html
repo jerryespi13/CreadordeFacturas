@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creador de facturas</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="index.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="logo">
-                <span>Click to select your logo</span>
-                <input type="file" name="logo" id="logo">
+            <div class="logo" id="logoContainer">
+                <span id="logoTexto" >Click to select your logo</span>
+                <input type="file" name="logo" id="logo" accept="image/*">
+                <img style="max-width: 100%;" alt="Logo del negocio" id="logoDelNegocio" class="logo-del-negocio">
             </div>
             <section class="company-info"></section>
             <section class="company-info2"></section>
@@ -20,7 +22,7 @@
 
         </section>
         <section>
-
+            
         </section>
     </div>
 </body>
