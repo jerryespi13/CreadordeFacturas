@@ -6,6 +6,7 @@
         <title>Creador de facturas</title>
         <link rel="stylesheet" href="style.css">
         <script type="module" src="index.js"></script>
+        <link rel="shortcut icon" href="Imagenes/icono.ico" type="image/x-icon">
     </head>
     <body>
         <div class="container">
@@ -16,15 +17,28 @@
                     <img style="max-width: 100%;" alt="Logo del negocio"
                         id="logoDelNegocio" class="logo-del-negocio">
                 </div>
-                <section class="company-info"></section>
-                <section class="company-info2"></section>
+                <section class="company-info">
+                    <p contenteditable="true" data-original-title="Enter Company Name">FancyMart</p>
+                    <p contenteditable="true" data-original-title="Enter Company Direction">123 Imaginary Street</p>
+                    <p contenteditable="true" data-original-title="Enter Company Direction">Fictional City, Made-Up Country</p>
+                    <p contenteditable="true" data-original-title="Enter Company Number">+1 (555) 987-6543</p>
+                    <p contenteditable="true" data-original-title="Enter Company Web">https://www.fancymart.com</p>
+                    <p contenteditable="true" data-original-title="Enter Company Email">contact@fancymart.com</p>
+                </section>
+                <section class="company-info2">
+                    <p contenteditable="true" data-original-title="Enter Company Details">Payment details:</p>
+                    <p contenteditable="true" data-original-title="Enter Company Details">ACC: 987654321X</p>
+                    <p contenteditable="true" data-original-title="Enter Company Details">IBAN: GB29RBOS12345612345678</p>
+                    <p contenteditable="true" data-original-title="Enter Company Details">SWIFT: RBOSGB2L</p>
+                </section>
             </header>
             <section class="bill-to-info">
-
+                
             </section>
             <section>
-
+                
             </section>
         </div>
+        <div id="tooltip" class="tooltip"></div>
     </body>
 </html>

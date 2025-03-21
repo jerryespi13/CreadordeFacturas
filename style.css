@@ -5,6 +5,7 @@
 }
 
 .container {
+    font: 13px / 1.4em 'Open Sans', sans-serif;
     margin: 0 auto;
     width: 820px;
     min-height: 1078px;
@@ -12,9 +13,17 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+header{
+    
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
 .logo {
     width: 150px;
-    height: 100px;
+    height: 106px;
     border-style: dotted;
     border-color: gray;
     display: flex;
@@ -50,4 +59,36 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
+}
+
+.company-info{
+    height: 106px;
+    width: 267px;
+}
+
+.company-info p, .company-info2 p{
+    margin: 1px;
+}
+
+.company-info p:first-child{
+    font-weight: 800;
+    font-size: large;
+}
+
+.company-info2 {
+    text-align: right;
+    height: 106px;
+    width: 230px;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }

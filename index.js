@@ -23,3 +23,26 @@ $inputLogo.addEventListener("change", function () {
         lector.readAsDataURL(archivo);
     }
 });
+
+// tooltip o mensaje de sugerencia en cada elemento editable
+const contentEditables = document.querySelectorAll('[contenteditable="true"]');
+    const tooltip = document.getElementById('tooltip');
+    contentEditables.forEach(element => {
+        element.addEventListener('click', (event) => {
+            // Obtener el texto del atributo data-original-title
+            const title = element.getAttribute('data-original-title');
+            if (title) {
+                tooltip.textContent = title; // Mostrar el texto en el tooltip
+                tooltip.style.display = 'block';
+                tooltip.style.left = `${event.pageX + 10}px`; // Posición del tooltip
+                tooltip.style.top = `${event.pageY + 10}px`;
+            }
+        });
+    });
+
+    document.addEventListener('click', (event) => {
+        // Ocultar el tooltip si se hace clic fuera de los elementos editables
+        if (![...contentEditables].some(el => el.contains(event.target))) {
+            tooltip.style.display = 'none';
+        }
+    });
