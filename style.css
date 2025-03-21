@@ -1,15 +1,19 @@
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-  }
-
-.container{
-    margin: 40px;
-    width: 100vw;
-    height: 100vh;
 }
-.logo{
-    width: 150px ;
+
+.container {
+    margin: 0 auto;
+    width: 820px;
+    min-height: 1078px;
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.logo {
+    width: 150px;
     height: 100px;
     border-style: dotted;
     border-color: gray;
@@ -17,30 +21,31 @@
     align-items: center;
 }
 
-.logo:hover{
+.logo:hover {
     border-color: black;
     cursor: pointer;
 }
 
-.logo span{
+.logo span {
     margin-top: 10px;
     color: #74746c;
     width: 100%;
     text-wrap: pretty;
     text-align: center;
-    line-height: 40px ;
+    line-height: 40px;
 }
 
-.logo span:hover{
+.logo span:hover {
     color: black;
-    
+
 }
 
-.logo input, .logo-del-negocio{
+.logo input,
+.logo-del-negocio {
     display: none;
 }
 
-.logo .logo-del-negocio{
+.logo .logo-del-negocio {
     margin: 0 auto;
     max-width: 100%;
     max-height: 100%;
