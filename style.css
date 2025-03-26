@@ -71,7 +71,7 @@ header{
 }
 
 .company-info p:first-child{
-    font-weight: 800;
+    font-weight: 600;
     font-size: large;
 }
 
@@ -79,6 +79,20 @@ header{
     text-align: right;
     height: 106px;
     width: 230px;
+}
+
+.bill-to-info{
+    width: 250px;
+    height: 128px;
+    margin: 31px 0px 0px 0px;
+}
+
+.bill-to-info p{
+    margin: 2px auto;
+}
+
+.bill-to-info p:first-child{
+    font-weight: 600;
 }
 
 .tooltip {
