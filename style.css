@@ -61,6 +61,8 @@ header{
     object-fit: cover;
 }
 
+
+
 .company-info{
     height: 106px;
     width: 267px;
@@ -81,19 +83,41 @@ header{
     width: 230px;
 }
 
-.bill-to-info{
-    width: 250px;
-    height: 128px;
+.info{
+    display: flex;
+    
     margin: 31px 0px 0px 0px;
 }
 
-.bill-to-info p{
+.bill-to-info{
+    width: 470px;
+    height: 128px;
+}
+
+.bill-to-info p, .invoice-info p{
     margin: 2px auto;
+    width: 90%;
 }
 
 .bill-to-info p:first-child{
     font-weight: 600;
 }
+
+.invoice-info{
+    height: 128px;
+    width: 160px;
+}
+
+.invoice-info div{
+    display: flex;
+    
+
+    & p{
+        min-width: 150px;
+    }
+
+}
+
 
 .tooltip {
     display: none;

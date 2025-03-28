@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head lang="en">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Creador de facturas</title>
@@ -32,16 +32,35 @@
                     <p contenteditable="true" data-original-title="Enter Company Details">SWIFT: RBOSGB2L</p>
                 </section>
             </header>
-            <section class="bill-to-info">
-                <p contenteditable="true" data-original-title="Enter bill to label">Bill to:</p>
-                <p contenteditable="true" data-original-title="Enter customer name">John Doe</p>
-                <p contenteditable="true" data-original-title="Enter customer direction">123 Elm Street</p>
-                <p contenteditable="true" data-original-title="Enter customer direction">Springfield, IL</p>
-                <p contenteditable="true" data-original-title="Enter customer phone">+1-555-123-4567</p>
-                <p contenteditable="true" data-original-title="Enter customer email">johndoe@example.com</p>
-            </section>
-            <section class="invoice-info">
-            </section>
+            <article class="info">
+                <section class="bill-to-info">
+                    <p contenteditable="true" data-original-title="Enter bill to label">Bill to:</p>
+                    <p contenteditable="true" data-original-title="Enter customer name">John Doe</p>
+                    <p contenteditable="true" data-original-title="Enter customer direction">123 Elm Street</p>
+                    <p contenteditable="true" data-original-title="Enter customer direction">Springfield, IL</p>
+                    <p contenteditable="true" data-original-title="Enter customer phone">+1-555-123-4567</p>
+                    <p contenteditable="true" data-original-title="Enter customer email">johndoe@example.com</p>
+                </section>
+                <section class="invoice-info">
+                    <div>
+                        <p contenteditable="true">Invoice No.</p>
+                        <span contenteditable="true">1</span>
+                    </div>
+                    <div>
+                        <p contenteditable="true">Invoice Date:</p>
+                        <input type="date" name="invoice-date" id="invoiceDate" value="">
+                    </div>
+                    <div>
+                        <p contenteditable="true">Issue Date</p>
+                        <input type="date" name="invoice-date" id="issueDate" value="">
+                    </div>
+                    <div>
+                        <p contenteditable="true">Due Date:</p>
+                        <input type="date" name="invoice-date" id="dueDate" value="">
+                    </div>
+                </section>
+            </article>
+            
         </div>
         <div id="tooltip" class="tooltip"></div>
     </body>

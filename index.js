@@ -1,3 +1,6 @@
+const actualDate = new Date().toISOString().split('T')[0];; // Fecha y hora actual
+
+const $inputDate = document.querySelectorAll('input[type="date"]')
 
 const $inputLogo = document.getElementById("logo")
 const $logoView = document.getElementById("logoDelNegocio")
@@ -46,3 +49,8 @@ const contentEditables = document.querySelectorAll('[contenteditable="true"]');
             tooltip.style.display = 'none';
         }
     });
+
+// asignar fecha actual a inputs de fechas
+$inputDate.forEach(input => {
+    input.value = actualDate
+});
