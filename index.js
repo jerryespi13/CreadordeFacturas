@@ -31,23 +31,28 @@ $inputLogo.addEventListener("change", function () {
 const contentEditables = document.querySelectorAll('[contenteditable="true"]');
     const tooltip = document.getElementById('tooltip');
     contentEditables.forEach(element => {
-        element.addEventListener('click', (event) => {
+        element.addEventListener('mouseover', (event) => {
             // Obtener el texto del atributo data-original-title
             const title = element.getAttribute('data-original-title');
             if (title) {
                 tooltip.textContent = title; // Mostrar el texto en el tooltip
                 tooltip.style.display = 'block';
-                tooltip.style.left = `${event.pageX + 10}px`; // Posición del tooltip
-                tooltip.style.top = `${event.pageY + 10}px`;
+
+                const rect = element.getBoundingClientRect(); // Obtener posición y dimensiones del elemento
+                const tooltipHeight = tooltip.offsetHeight;
+                const tooltipWidth = tooltip.offsetWidth;
+
+                // Calcular posición para centrar el tooltip arriba del elemento
+                const top = rect.top - tooltipHeight - 5; // 5px de margen opcional
+                const left = rect.left + (rect.width / 2) - (tooltipWidth / 2);
+
+                tooltip.style.left = `${left}px`;
+                tooltip.style.top = `${top}px`;
             }
         });
-    });
-
-    document.addEventListener('click', (event) => {
-        // Ocultar el tooltip si se hace clic fuera de los elementos editables
-        if (![...contentEditables].some(el => el.contains(event.target))) {
-            tooltip.style.display = 'none';
-        }
+        element.addEventListener('mouseout', () => {
+            tooltip.style.display = 'none'; // Ocultar el tooltip cuando el mouse salga del elemento
+        });
     });
 
 // asignar fecha actual a inputs de fechas

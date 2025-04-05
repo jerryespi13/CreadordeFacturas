@@ -118,6 +118,15 @@ header{
 
 }
 
+[contenteditable="true"]:hover {
+    border: 1px solid #0374ec; /* Cambia el color al que prefieras */
+    border-radius: 5px; /* Opcional: redondear las esquinas */
+}
+
+[contenteditable="true"]:focus {
+    border: 1px solid #044d9c; /* Cambia el color al que prefieras */
+    border-radius: 5px; /* Opcional: redondear las esquinas */
+}
 
 .tooltip {
     display: none;
@@ -129,4 +138,15 @@ header{
     font-size: 12px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Ubica la flecha debajo del tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent; /* Flecha hacia abajo */
 }
