@@ -118,14 +118,29 @@ header{
 
 }
 
+input[type="date"]{
+    border: none;
+    outline: none;  
+}
+
+input[type="date"]:focus {
+    border-color: #8338ec;
+    box-shadow: 0 0 8px rgba(131, 56, 236, 0.4);
+  }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+display: none;  
+}
+
 [contenteditable="true"]:hover {
     border: 1px solid #0374ec; /* Cambia el color al que prefieras */
     border-radius: 5px; /* Opcional: redondear las esquinas */
 }
 
 [contenteditable="true"]:focus {
-    border: 1px solid #044d9c; /* Cambia el color al que prefieras */
+    border: 2px solid #0374ec; /* Cambia el color al que prefieras */
     border-radius: 5px; /* Opcional: redondear las esquinas */
+    outline: none;
 }
 
 .tooltip {

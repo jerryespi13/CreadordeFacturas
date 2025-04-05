@@ -55,7 +55,10 @@ const contentEditables = document.querySelectorAll('[contenteditable="true"]');
         });
     });
 
-// asignar fecha actual a inputs de fechas
+// asignar fecha actual a inputs de fechas y mostrar selector de fecha al hacer click
 $inputDate.forEach(input => {
     input.value = actualDate
+    input.addEventListener('click', function() {
+        this.showPicker();
+      })
 });
